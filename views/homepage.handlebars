@@ -1,1 +1,11 @@
-<div>You are now on the homepage</div>
+<div>
+    {{#each post as |post|}}
+
+{{> post-info post }}
+</div>
+
+<div>
+    {{else}}
+    <h5 class="pb-4 has-text-centered is-italic">There are no posts</h5>
+</div>
+{{/each}}

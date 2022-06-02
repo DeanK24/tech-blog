@@ -1,21 +1,12 @@
-<div class="card mb-5">
-  <header class="card-header card-header-title has-background-grey-lighter">
-    <div class="column">
-      <p class="has-text-primary-light"></p>
-      <a
-        href="/post{{id}}"
-        class="has-text-black is-capitalized is-pulled-left"
-      >{{title}}</a>
-    </div>
-  </header>
-  <div class="card-content">
-    <div class="is-pulled-right">
-      <p>{{user.username}}</p>
-      |
-      {{created_at}}
-      |
-      <a href="/post/{{id}}">{{comments.length}}
-        {{comments.length}}</a>
-    </div>
+<article class="card mb-5">
+  <div class="title">
+    <a href="{{post_url}}">{{title}}</a>
   </div>
-</div>
+  <div class="meta">
+    <p>{{user.username}}</p>
+    |
+    {{created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural  "comment" comments.length}}</a>
+  </div>
+</article>
